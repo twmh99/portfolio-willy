@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Willy Hutagalung – Portfolio</title>
+  <meta name="description" content="Portfolio Theofilus Willy Marojahan Hgl – Information Systems student, UI/UX designer, web developer, and leader with experience in digital banking, data analytics, and project management." />
+  <meta property="og:title" content="Willy Hutagalung – Portfolio" />
+  <meta property="og:description" content="Showcasing projects, certifications, technical skills, and leadership experiences." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://willyhutagalung99-portfolio.vercel.app/og-image.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <!-- SEO Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Theofilus Willy Marojahan Hgl",
+      "alternateName": "Willy Hutagalung",
+      "jobTitle": "Information Systems Student, UI/UX Designer, Web Developer",
+      "email": "willyhutagalung99@gmail.com",
+      "telephone": "+6282384751520",
+      "url": "https://willyhutagalung99-portfolio.vercel.app/",
+      "image": "https://willyhutagalung99-portfolio.vercel.app/profile.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Yogyakarta",
+        "addressCountry": "ID"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universitas Atma Jaya Yogyakarta"
+      },
+      "knowsAbout": ["UI/UX Design", "Web Development", "Data Analytics", "JavaScript", "Next.js", "Figma", "Tableau", "Digital Banking", "Leadership"],
+      "sameAs": [
+        "https://www.linkedin.com/in/willy-hutagalung-205463316/",
+        "https://github.com/twmh99"
+      ]
+    }
+  }
+  </script>
+</head>
+<body class="dark">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('portfolio-theme');
+      if (savedTheme === 'light') {
+        document.body.className = 'light';
+      }
+    })();
+  </script>
+
+  <!-- ===== PRELOADER ===== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-visual">
+        <div class="preloader-ring ring-1"></div>
+        <div class="preloader-ring ring-2"></div>
+        <div class="preloader-logo">W</div>
+      </div>
+      <div class="preloader-text">Willy Hutagalung</div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Background grid -->
+  <div class="bg-grid"></div>
+  <div class="bg-noise"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="nav-logo">
+        <div class="nav-avatar-ring">
+          <div class="nav-avatar">
+            <img src="profile.png" alt="Willy" />
+          </div>
+        </div>
+        <div class="nav-brand">
+          <span class="nav-name">Willy Hutagalung</span>
+          <span class="nav-title" data-i18n="nav.subtitle">IS Student · Designer · Developer</span>
+        </div>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active" data-section="home" data-i18n="nav.home">Home</a>
+        <a href="#about" class="nav-link" data-section="about" data-i18n="nav.about">About</a>
+        <a href="#experience" class="nav-link" data-section="experience" data-i18n="nav.experience">Experience</a>
+        <a href="#projects" class="nav-link" data-section="projects" data-i18n="nav.projects">Projects</a>
+        <a href="#certifications" class="nav-link" data-section="certifications" data-i18n="nav.certifications">Certifications</a>
+        <a href="#skills" class="nav-link" data-section="skills" data-i18n="nav.skills">Skills</a>
+        <a href="#contact" class="nav-link" data-section="contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <!-- Search -->
+        <button class="btn-icon" id="searchToggle" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </button>
+        <!-- Language Toggle -->
+        <button class="btn-lang" id="langToggle" aria-label="Toggle language" title="Switch Language">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span id="langLabel">ID</span>
+        </button>
+        <!-- Theme -->
+        <button class="btn-icon" id="themeToggle" aria-label="Toggle theme">
+          <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm" data-i18n="nav.cta">Let's Connect</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero section" id="home">
+      <div class="container hero-inner">
+        <div class="hero-content" data-animate>
+          <div class="badge animate-in" style="--delay:0.1s">
+            <span class="badge-dot"></span>
+            <span data-i18n="hero.badge">Available for Opportunities</span>
+          </div>
+          <h1 class="hero-title animate-in" style="--delay:0.2s">
+            <span data-i18n="hero.title1">Designing &amp; Building</span><br />
+            <span class="gradient-text" data-i18n="hero.title2">Premium Digital</span><br />
+            <span class="typewriter-text" id="typewriterText"></span><span class="typewriter-cursor">|</span>
+          </h1>
+          <p class="hero-subtitle animate-in" style="--delay:0.3s" data-i18n="hero.subtitle">
+            Information Systems student at Universitas Atma Jaya Yogyakarta with hands-on experience in digital banking, web development, UI/UX design, data analytics, and leadership.
+          </p>
+          <div class="hero-chips animate-in" style="--delay:0.4s">
+            <span class="chip" data-i18n="chip.uiux">UI/UX Design</span>
+            <span class="chip" data-i18n="chip.webdev">Web Development</span>
+            <span class="chip" data-i18n="chip.data">Data Analytics</span>
+            <span class="chip" data-i18n="chip.leadership">Leadership</span>
+          </div>
+          <div class="hero-cta animate-in" style="--delay:0.5s">
+            <a href="#projects" class="btn btn-primary btn-lg" data-i18n="hero.viewProjects">View My Projects</a>
+            <a href="#contact" class="btn btn-ghost btn-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span data-i18n="hero.getInTouch">Get In Touch</span>
+            </a>
+          </div>
+          <div class="hero-stats animate-in" style="--delay:0.6s">
+            <div class="stat">
+              <span class="stat-num">3+</span>
+              <span class="stat-label" data-i18n="stats.projects">Major Projects</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-num">6+</span>
+              <span class="stat-label" data-i18n="stats.certs">Certifications</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-num">10+</span>
+              <span class="stat-label" data-i18n="stats.roles">Org Roles</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-num">3.69</span>
+              <span class="stat-label" data-i18n="stats.gpa">GPA / 4.00</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual animate-in" style="--delay:0.3s" data-animate>
+          <div class="hero-card glass-card">
+            <div class="profile-ring">
+              <div class="profile-avatar">
+                <img src="profile.png" alt="Theofilus Willy Marojahan Hgl" />
+              </div>
+            </div>
+            <h3 class="profile-name">Theofilus Willy<br/>Marojahan Hgl</h3>
+            <p class="profile-role" data-i18n="nav.subtitle">IS Student · Designer · Developer</p>
+            <p class="profile-location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Yogyakarta, Indonesia
+            </p>
+            <div class="profile-tags">
+              <span class="tag tag-blue">Next.js</span>
+              <span class="tag tag-purple">Figma</span>
+              <span class="tag tag-green">Tableau</span>
+              <span class="tag tag-orange">Canva</span>
+            </div>
+            <div class="profile-links">
+              <a href="mailto:willyhutagalung99@gmail.com" class="profile-link-btn" title="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/willy-hutagalung-205463316/" target="_blank" rel="noopener" class="profile-link-btn" title="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+              <a href="https://github.com/twmh99" target="_blank" rel="noopener" class="profile-link-btn" title="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+            <div class="float-badge float-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Web Developer
+            </div>
+            <div class="float-badge float-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              UI/UX Designer
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator">
+        <span data-i18n="hero.scroll">Scroll to explore</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <p class="section-label" data-i18n="about.label">About Me</p>
+          <h2 class="section-title" data-i18n="about.title">Passionate About Tech,<br/><span class="gradient-text" data-i18n="about.titleGrad">Design &amp; Leadership</span></h2>
+        </div>
+        <div class="about-grid" data-animate>
+          <div class="about-text">
+            <p class="about-desc" data-i18n="about.desc1">
+              I'm <strong>Theofilus Willy Marojahan Hgl</strong>, an Information Systems student at Universitas Atma Jaya Yogyakarta (GPA 3.69/4.00) with a deep passion for digital transformation, business analysis, and user-centered design.
+            </p>
+            <p class="about-desc" data-i18n="about.desc2">
+              With hands-on experience as a <strong>Growth &amp; Acquisition Intern at PT Bank Digital BCA</strong>, I've worked in cross-functional teams in one of Indonesia's top digital banking environments, strengthening my analytical thinking and communication skills.
+            </p>
+            <p class="about-desc" data-i18n="about.desc3">
+              Beyond technical work, I've led organizations, trained students in graphic design, moderated national seminars, and represented my university at national intercultural events. I thrive at the intersection of technology, design, and people.
+            </p>
+            <div class="about-info-grid">
+              <div class="info-item">
+                <span class="info-label" data-i18n="about.infoEducation">Education</span>
+                <span class="info-value">Universitas Atma Jaya Yogyakarta</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label" data-i18n="about.infoDegree">Degree</span>
+                <span class="info-value" data-i18n="about.degreeVal">Bachelor of Information Systems</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">GPA</span>
+                <span class="info-value">3.69 / 4.00</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label" data-i18n="about.infoExpected">Expected</span>
+                <span class="info-value">Aug 2023 – Aug 2027</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label" data-i18n="about.infoLocation">Location</span>
+                <span class="info-value">Yogyakarta, Indonesia</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label" data-i18n="about.infoPhone">Phone</span>
+                <span class="info-value">082384751520</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-cards">
+            <div class="about-card glass-card">
+              <div class="about-card-icon" style="background: var(--accent-blue-soft)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </div>
+              <h4 data-i18n="about.card1Title">Design &amp; UI/UX</h4>
+              <p data-i18n="about.card1Desc">Creating beautiful, user-centered interfaces with Figma and Canva. From wireframes to polished prototypes.</p>
+            </div>
+            <div class="about-card glass-card">
+              <div class="about-card-icon" style="background: var(--accent-purple-soft)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h4 data-i18n="about.card2Title">Web Development</h4>
+              <p data-i18n="about.card2Desc">Building responsive web apps with HTML, CSS, JavaScript, and Next.js. Full-stack capability for real-world projects.</p>
+            </div>
+            <div class="about-card glass-card">
+              <div class="about-card-icon" style="background: var(--accent-green-soft)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              </div>
+              <h4 data-i18n="about.card3Title">Data Analytics</h4>
+              <p data-i18n="about.card3Desc">Transforming raw data into insights with Tableau, business intelligence tools, and data visualization techniques.</p>
+            </div>
+            <div class="about-card glass-card">
+              <div class="about-card-icon" style="background: var(--accent-orange-soft)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h4 data-i18n="about.card4Title">Leadership</h4>
+              <p data-i18n="about.card4Desc">Led organizations, managed events, trained teams, and communicated across multiple stakeholder groups nationally.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <p class="section-label" data-i18n="exp.label">Experience</p>
+          <h2 class="section-title">Work &amp; <span class="gradient-text" data-i18n="exp.titleGrad">Leadership Journey</span></h2>
+        </div>
+
+        <div class="experience-tabs" data-animate>
+          <button class="exp-tab active" data-tab="work" data-i18n="exp.tabWork">💼 Work Experience</button>
+          <button class="exp-tab" data-tab="leadership" data-i18n="exp.tabLeadership">🏆 Leadership &amp; Org</button>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="exp-panel active" id="tab-work" data-animate>
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <div class="timeline-dot accent-blue"></div>
+              <div class="timeline-content glass-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Growth &amp; Acquisition Intern</h3>
+                    <p class="timeline-org">PT Bank Digital BCA (BCA Digital)</p>
+                    <p class="timeline-loc">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                      Yogyakarta, Indonesia
+                    </p>
+                  </div>
+                  <span class="timeline-date">Apr 2026 – Jul 2026</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li data-i18n="exp.bca.li1">Selected as Growth &amp; Acquisition Intern in the Growth &amp; Acquisition Division.</li>
+                  <li data-i18n="exp.bca.li2">Supported customer acquisition initiatives and digital banking growth programs.</li>
+                  <li data-i18n="exp.bca.li3">Assisted brand activation activities and user engagement campaigns.</li>
+                  <li data-i18n="exp.bca.li4">Collaborated with cross-functional teams in operational and business development activities.</li>
+                  <li data-i18n="exp.bca.li5">Strengthened communication, analytical thinking, teamwork, and problem-solving skills in a professional banking environment.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag tag-blue" data-i18n="tag.digitalBanking">Digital Banking</span>
+                  <span class="tag tag-purple" data-i18n="tag.growthStrategy">Growth Strategy</span>
+                  <span class="tag tag-green" data-i18n="tag.dataAnalysis">Data Analysis</span>
+                </div>
+                <button class="btn-view-exp" data-exp="bca" data-i18n="exp.viewDetail">Lihat Detail</button>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot accent-purple"></div>
+              <div class="timeline-content glass-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role" data-i18n="exp.konstelasi.role">Assistant Moderator – Seminar Nasional KONSTELASI 2026</h3>
+                    <p class="timeline-org">Universitas Atma Jaya Yogyakarta</p>
+                    <p class="timeline-loc">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                      Yogyakarta, Indonesia
+                    </p>
+                  </div>
+                  <span class="timeline-date">Jan 2026</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li data-i18n="exp.konstelasi.li1">Assisted moderation activities during Seminar Nasional KONSTELASI 2026.</li>
+                  <li data-i18n="exp.konstelasi.li2">Coordinated session flow, speaker preparation, and participant engagement.</li>
+                  <li data-i18n="exp.konstelasi.li3">Supported communication between moderators, speakers, and committee members.</li>
+                  <li data-i18n="exp.konstelasi.li4">Developed public speaking, event coordination, and stakeholder communication skills.</li>
+                  <li data-i18n="exp.konstelasi.li5">Received Certificate of Appreciation as Assistant Moderator.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag tag-blue" data-i18n="tag.publicSpeaking">Public Speaking</span>
+                  <span class="tag tag-orange" data-i18n="tag.eventMgmt">Event Management</span>
+                </div>
+                <button class="btn-view-exp" data-exp="konstelasi" data-i18n="exp.viewDetail">Lihat Detail</button>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot accent-green"></div>
+              <div class="timeline-content glass-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role" data-i18n="exp.canva.role">Speaker / Canva Graphic Design Trainer</h3>
+                    <p class="timeline-org">Himpunan Mahasiswa Sistem Informasi (HIMSI) UAJY</p>
+                    <p class="timeline-loc">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                      Giriwoyo, Central Java, Indonesia
+                    </p>
+                  </div>
+                  <span class="timeline-date">Mar 2025</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li data-i18n="exp.canva.li1">Delivered Canva graphic design training for high school students.</li>
+                  <li data-i18n="exp.canva.li2">Developed learning materials covering typography, layout, color theory, and visual communication.</li>
+                  <li data-i18n="exp.canva.li3">Facilitated project-based learning activities and practical design exercises.</li>
+                  <li data-i18n="exp.canva.li4">Improved participants' digital creativity and design skills.</li>
+                  <li data-i18n="exp.canva.li5">Awarded Certificate of Appreciation as training speaker.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag tag-purple">Canva</span>
+                  <span class="tag tag-green" data-i18n="tag.designTraining">Design Training</span>
+                  <span class="tag tag-blue" data-i18n="tag.teaching">Teaching</span>
+                </div>
+                <button class="btn-view-exp" data-exp="canva" data-i18n="exp.viewDetail">Lihat Detail</button>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot accent-orange"></div>
+              <div class="timeline-content glass-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role" data-i18n="exp.aptik.role">University Representative – ISC APTIK 2024</h3>
+                    <p class="timeline-org">Asosiasi Perguruan Tinggi Katolik Indonesia (APTIK)</p>
+                    <p class="timeline-loc">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                      Tabanan, Bali, Indonesia
+                    </p>
+                  </div>
+                  <span class="timeline-date">Oct 2024</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li data-i18n="exp.aptik.li1">Represented Universitas Atma Jaya Yogyakarta at Intercultural Student Camp (ISC) APTIK 2024.</li>
+                  <li data-i18n="exp.aptik.li2">Participated in intercultural discussions and collaborative leadership activities.</li>
+                  <li data-i18n="exp.aptik.li3">Engaged in programs related to ecology, tourism, youth spirituality, and globalization.</li>
+                  <li data-i18n="exp.aptik.li4">Developed intercultural communication, adaptability, teamwork, and leadership skills.</li>
+                  <li data-i18n="exp.aptik.li5">Received Certificate of Participation as university representative.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag tag-orange" data-i18n="tag.leadership">Leadership</span>
+                  <span class="tag tag-blue" data-i18n="tag.crossCultural">Cross-Cultural</span>
+                </div>
+                <button class="btn-view-exp" data-exp="aptik" data-i18n="exp.viewDetail">Lihat Detail</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Leadership Experience -->
+        <div class="exp-panel" id="tab-leadership" data-animate>
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <div class="timeline-dot accent-blue"></div>
+              <div class="timeline-content glass-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role" data-i18n="exp.miskam.role">Chairman – Misa Kampus UAJY</h3>
+                    <p class="timeline-org">Misa Kampus Universitas Atma Jaya Yogyakarta</p>
+                    <p class="timeline-loc" data-i18n="exp.miskam.loc">Catholic campus ministry · Leadership, community engagement &amp; student development</p>
+                  </div>
+                  <span class="timeline-date">Dec 2024 – Jun 2025</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li data-i18n="exp.miskam.li1">Led organizational programs and strategic planning initiatives.</li>
+                  <li data-i18n="exp.miskam.li2">Coordinated committee activities and cross-functional collaboration.</li>
+                  <li data-i18n="exp.miskam.li3">Managed internal communication, administration, and event execution.</li>
+                  <li data-i18n="exp.miskam.li4">Supervised organizational projects and member development activities.</li>
+                  <li data-i18n="exp.miskam.li5">Strengthened leadership, decision-making, and project management skills.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag tag-blue" data-i18n="tag.chairman">Chairman</span>
+                  <span class="tag tag-purple" data-i18n="tag.strategicPlanning">Strategic Planning</span>
+                  <span class="tag tag-green" data-i18n="tag.eventMgmt">Event Management</span>
+                </div>
+                <button class="btn-view-exp" data-exp="miskam" data-i18n="exp.viewDetail">Lihat Detail</button>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot accent-purple"></div>
+              <div class="timeline-content glass-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role" data-i18n="exp.sekretariat.role">Coordinator of Secretariat Division</h3>
+                    <p class="timeline-org">Universitas Atma Jaya Yogyakarta – PKKMB, UKM &amp; Community Fair, Fun Walk Dies Natalis</p>
+                  </div>
+                  <span class="timeline-date">Jul 2025 – Oct 2025</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li data-i18n="exp.sekretariat.li1">Coordinated secretariat and administrative operations across 3 major university events.</li>
+                  <li data-i18n="exp.sekretariat.li2">Managed documentation, schedules, and official correspondence.</li>
+                  <li data-i18n="exp.sekretariat.li3">Supported committee workflow, project coordination, and collaboration among student organizations.</li>
+                  <li data-i18n="exp.sekretariat.li4">Ensured operational effectiveness during event execution.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag tag-purple" data-i18n="tag.administration">Administration</span>
+                  <span class="tag tag-orange" data-i18n="tag.3events">3 Events</span>
+                </div>
+                <button class="btn-view-exp" data-exp="sekretariat" data-i18n="exp.viewDetail">Lihat Detail</button>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot accent-green"></div>
+              <div class="timeline-content glass-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role" data-i18n="exp.jobfair.role">Social Media &amp; Design Staff – Job Fair UAJY 2025</h3>
+                    <p class="timeline-org">Universitas Atma Jaya Yogyakarta</p>
+                  </div>
+                  <span class="timeline-date">Feb 2025</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li data-i18n="exp.jobfair.li1">Created promotional content and visual materials for Job Fair UAJY 2025.</li>
+                  <li data-i18n="exp.jobfair.li2">Supported social media campaigns and digital branding initiatives.</li>
+                  <li data-i18n="exp.jobfair.li3">Assisted event documentation and audience engagement activities.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag tag-green" data-i18n="tag.socialMedia">Social Media</span>
+                  <span class="tag tag-purple" data-i18n="tag.design">Design</span>
+                </div>
+                <button class="btn-view-exp" data-exp="jobfair" data-i18n="exp.viewDetail">Lihat Detail</button>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot accent-orange"></div>
+              <div class="timeline-content glass-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role" data-i18n="exp.steering.role">Multiple Steering Committee Roles</h3>
+                    <p class="timeline-org">Misa Kampus UAJY – Miskam Week 2025 &amp; Action Plan 2025</p>
+                  </div>
+                  <span class="timeline-date">Dec 2024 – May 2025 / Feb 2025</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li data-i18n="exp.steering.li1">Supervised event preparation, execution, and strategic planning.</li>
+                  <li data-i18n="exp.steering.li2">Coordinated communication among committee divisions.</li>
+                  <li data-i18n="exp.steering.li3">Assisted decision-making and operational planning.</li>
+                  <li data-i18n="exp.steering.li4">Supported environmental conservation and community engagement programs.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag tag-orange" data-i18n="tag.steeringCommittee">Steering Committee</span>
+                  <span class="tag tag-blue" data-i18n="tag.community">Community</span>
+                </div>
+                <button class="btn-view-exp" data-exp="steering" data-i18n="exp.viewDetail">Lihat Detail</button>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot accent-blue"></div>
+              <div class="timeline-content glass-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role" data-i18n="exp.pubdok.role">Coordinator of Publication, Design &amp; Documentation</h3>
+                    <p class="timeline-org">FORMASI &amp; PSSB Social Service / Mental Health Talkshow 2024</p>
+                  </div>
+                  <span class="timeline-date">Sep 2024 / Dec 2023</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li data-i18n="exp.pubdok.li1">Coordinated publication, design, and documentation activities.</li>
+                  <li data-i18n="exp.pubdok.li2">Managed visual communication and media materials.</li>
+                  <li data-i18n="exp.pubdok.li3">Supervised documentation during community service programs.</li>
+                  <li data-i18n="exp.pubdok.li4">Designed promotional and publication materials for Mental Health Talkshow 2024.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag tag-blue" data-i18n="tag.publication">Publication</span>
+                  <span class="tag tag-purple" data-i18n="tag.design">Design</span>
+                  <span class="tag tag-green" data-i18n="tag.documentation">Documentation</span>
+                </div>
+                <button class="btn-view-exp" data-exp="pubdok" data-i18n="exp.viewDetail">Lihat Detail</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <p class="section-label" data-i18n="proj.label">Projects</p>
+          <h2 class="section-title">Featured <span class="gradient-text" data-i18n="proj.titleGrad">Work</span></h2>
+          <p class="section-subtitle" data-i18n="proj.subtitle">Projects that demonstrate my skills in web development, design, and business systems.</p>
+        </div>
+
+        <!-- Project Filter Tabs -->
+        <div class="proj-filters" data-animate>
+          <button class="proj-filter active" data-filter="all" data-i18n="filter.all">All</button>
+          <button class="proj-filter" data-filter="webdev" data-i18n="filter.webdev">Web Development</button>
+          <button class="proj-filter" data-filter="uiux" data-i18n="filter.uiux">UI/UX Design</button>
+          <button class="proj-filter" data-filter="data" data-i18n="filter.data">Data Analytics</button>
+        </div>
+
+        <div class="projects-grid" data-animate>
+
+          <div class="project-card glass-card featured" data-category="webdev uiux">
+            <div class="project-visual project-visual-1">
+              <img src="project-1.jpg" alt="Portfolio Preview" class="project-img" onerror="this.style.display='none';" />
+              <div class="project-icon-large">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="badge-mini blue">Full-Stack Web</span>
+                <span class="badge-mini">2025</span>
+              </div>
+              <h3 class="project-title" data-i18n="proj.portfolio.title">Personal Portfolio Website</h3>
+              <p class="project-desc" data-i18n="proj.portfolio.desc">Developed a responsive personal portfolio website showcasing projects, certifications, leadership experiences, and technical skills using modern web technologies and UI/UX principles.</p>
+              <div class="project-tech">
+                <span class="tag tag-blue">HTML</span>
+                <span class="tag tag-purple">CSS</span>
+                <span class="tag tag-green">JavaScript</span>
+                <span class="tag tag-orange">UI/UX</span>
+              </div>
+              <button class="btn-view-details" data-project="portfolio" data-i18n="proj.viewDetails">View Details</button>
+            </div>
+          </div>
+
+          <div class="project-card glass-card" data-category="webdev">
+            <div class="project-visual project-visual-2">
+              <img src="project-2.jpg" alt="FutureTech Preview" class="project-img" onerror="this.style.display='none';" />
+              <div class="project-icon-large">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="badge-mini purple">Full-Stack Web</span>
+                <span class="badge-mini">2025</span>
+              </div>
+              <h3 class="project-title" data-i18n="proj.futuretech.title">FutureTech – Futuristic E-Commerce Platform</h3>
+              <p class="project-desc" data-i18n="proj.futuretech.desc">Built a full-stack e-commerce platform with authentication, dashboard management, product management, order tracking, and responsive UI using Next.js and MongoDB.</p>
+              <div class="project-tech">
+                <span class="tag tag-blue">Next.js</span>
+                <span class="tag tag-green">MongoDB</span>
+                <span class="tag tag-purple" data-i18n="tag.authentication">Authentication</span>
+              </div>
+              <button class="btn-view-details" data-project="futuretech" data-i18n="proj.viewDetails">View Details</button>
+            </div>
+          </div>
+
+          <div class="project-card glass-card" data-category="webdev data">
+            <div class="project-visual project-visual-3">
+              <img src="project-3.jpg" alt="SMPJ Preview" class="project-img" onerror="this.style.display='none';" />
+              <div class="project-icon-large">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="badge-mini green" data-i18n="proj.webApp">Web Application</span>
+                <span class="badge-mini">2025</span>
+              </div>
+              <h3 class="project-title" data-i18n="proj.smpj.title">SMPJ – Employee Management Information System</h3>
+              <p class="project-desc" data-i18n="proj.smpj.desc">Built a web-based employee management system supporting attendance tracking, payroll recap, shift scheduling, productivity monitoring, and performance analysis.</p>
+              <div class="project-tech">
+                <span class="tag tag-blue">Web App</span>
+                <span class="tag tag-orange">HR System</span>
+                <span class="tag tag-green" data-i18n="tag.analytics">Analytics</span>
+              </div>
+              <button class="btn-view-details" data-project="smpj" data-i18n="proj.viewDetails">View Details</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECT DETAILS MODAL ===== -->
+    <div class="proj-modal-overlay" id="projModalOverlay">
+      <div class="proj-modal glass-card" id="projModal">
+        <button class="proj-modal-close" id="projModalClose" aria-label="Close modal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div class="proj-modal-visual">
+          <img id="projModalImage" src="" alt="Project Visual" />
+        </div>
+        <div class="proj-modal-body">
+          <div class="proj-modal-meta" id="projModalMeta"></div>
+          <h2 class="proj-modal-title" id="projModalTitle"></h2>
+          <p class="proj-modal-desc" id="projModalDesc"></p>
+          <div class="proj-modal-section">
+            <h4 class="proj-modal-section-title" id="projModalChallengeLabel">Key Features & Challenges</h4>
+            <ul class="proj-modal-list" id="projModalChallenge"></ul>
+          </div>
+          <div class="proj-modal-section">
+            <h4 class="proj-modal-section-title" id="projModalOutcomeLabel">Outcomes & Impact</h4>
+            <p class="proj-modal-outcome" id="projModalOutcome"></p>
+          </div>
+          <div class="proj-modal-tech" id="projModalTech"></div>
+          <div class="proj-modal-actions" id="projModalActions"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== EXPERIENCE DETAIL MODAL ===== -->
+    <div class="exp-modal-overlay" id="expModalOverlay">
+      <div class="exp-modal glass-card" id="expModal">
+        <button class="exp-modal-close" id="expModalClose" aria-label="Close modal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div class="exp-modal-header" id="expModalHeader">
+          <div class="exp-modal-icon" id="expModalIcon"></div>
+          <div class="exp-modal-header-text">
+            <div class="exp-modal-meta" id="expModalMeta"></div>
+            <h2 class="exp-modal-title" id="expModalTitle"></h2>
+            <p class="exp-modal-org" id="expModalOrg"></p>
+          </div>
+        </div>
+        <div class="exp-modal-body">
+          <div class="exp-modal-section">
+            <h4 class="exp-modal-section-title" id="expModalDescLabel">Overview</h4>
+            <p class="exp-modal-desc" id="expModalDesc"></p>
+          </div>
+          <div class="exp-modal-section">
+            <h4 class="exp-modal-section-title" id="expModalResponsLabel">Key Responsibilities</h4>
+            <ul class="exp-modal-list" id="expModalRespons"></ul>
+          </div>
+          <div class="exp-modal-section" id="expModalLearningSection">
+            <h4 class="exp-modal-section-title" id="expModalLearningLabel">Key Learnings & Impact</h4>
+            <p class="exp-modal-outcome" id="expModalLearning"></p>
+          </div>
+          <div class="exp-modal-tags" id="expModalTags"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section class="section certifications-section" id="certifications">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <p class="section-label" data-i18n="cert.label">Certifications</p>
+          <h2 class="section-title">Professional <span class="gradient-text" data-i18n="cert.titleGrad">Achievements</span></h2>
+          <p class="section-subtitle" data-i18n="cert.subtitle">Verified certifications that demonstrate continuous learning and expertise.</p>
+        </div>
+        <div class="certs-grid" data-animate>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div class="cert-body">
+              <span class="cert-year">2026</span>
+              <h4 class="cert-title">Tableau Intermediate</h4>
+              <p class="cert-desc" data-i18n="cert.tableauInt.desc">Advanced dashboard development, calculated fields, data blending, filters, parameters, storytelling, and interactive data analysis.</p>
+              <div class="cert-tags">
+                <span class="tag tag-purple">Tableau</span>
+                <span class="tag tag-blue" data-i18n="tag.dataAnalytics">Data Analytics</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div class="cert-body">
+              <span class="cert-year">2025</span>
+              <h4 class="cert-title">Tableau Fundamentals</h4>
+              <p class="cert-desc" data-i18n="cert.tableauFund.desc">Data visualization principles, dashboard creation, chart development, data exploration, and business intelligence concepts.</p>
+              <div class="cert-tags">
+                <span class="tag tag-purple">Tableau</span>
+                <span class="tag tag-green" data-i18n="tag.visualization">Visualization</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <div class="cert-body">
+              <span class="cert-year">2025</span>
+              <h4 class="cert-title">ISO/IEC 27001:2022 Foundation</h4>
+              <p class="cert-desc" data-i18n="cert.iso.desc">Foundation training in Information Security Management Systems (ISMS), cybersecurity awareness, risk management, and ISO/IEC 27001 standards.</p>
+              <div class="cert-tags">
+                <span class="tag tag-blue" data-i18n="tag.security">Security</span>
+                <span class="tag tag-orange">ISO Standard</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
+            <div class="cert-body">
+              <span class="cert-year">2026</span>
+              <h4 class="cert-title">Belajar Penggunaan Generative AI – Dicoding</h4>
+              <p class="cert-desc" data-i18n="cert.genai.desc">Generative AI training covering AI fundamentals, prompt engineering, ethical AI usage, and practical applications for productivity.</p>
+              <div class="cert-tags">
+                <span class="tag tag-green">AI</span>
+                <span class="tag tag-purple" data-i18n="tag.promptEng">Prompt Engineering</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div class="cert-body">
+              <span class="cert-year">2026</span>
+              <h4 class="cert-title">AI Praktis untuk Produktivitas</h4>
+              <p class="cert-desc" data-i18n="cert.aipraktis.desc">Practical AI training focused on productivity enhancement using AI tools. Prompt engineering fundamentals, AI-assisted workflows, content generation, and task automation.</p>
+              <div class="cert-tags">
+                <span class="tag tag-orange">AI Tools</span>
+                <span class="tag tag-blue" data-i18n="tag.productivity">Productivity</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="cert-body">
+              <span class="cert-year">2026</span>
+              <h4 class="cert-title">Spec-Driven Development dengan Kiro – Dicoding</h4>
+              <p class="cert-desc" data-i18n="cert.kiro.desc">AI-assisted software development workflows, specification-based development practices, and modern software engineering approaches.</p>
+              <div class="cert-tags">
+                <span class="tag tag-purple" data-i18n="tag.softwareDev">Software Dev</span>
+                <span class="tag tag-green" data-i18n="tag.aiAssisted">AI-Assisted</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <p class="section-label" data-i18n="skills.label">Skills</p>
+          <h2 class="section-title">Technical &amp; <span class="gradient-text" data-i18n="skills.titleGrad">Soft Skills</span></h2>
+        </div>
+        <div class="skills-grid" data-animate>
+
+          <div class="skill-group glass-card">
+            <div class="skill-group-header">
+              <div class="skill-group-icon" style="background: var(--accent-blue-soft)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              </div>
+              <h4 data-i18n="skills.dataTitle">Data &amp; Analytics</h4>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill">Tableau</span>
+              <span class="skill-pill" data-i18n="skill.dataAnalysis">Data Analysis</span>
+              <span class="skill-pill" data-i18n="skill.dataViz">Data Visualization</span>
+              <span class="skill-pill" data-i18n="skill.bi">Business Intelligence</span>
+            </div>
+          </div>
+
+          <div class="skill-group glass-card">
+            <div class="skill-group-header">
+              <div class="skill-group-icon" style="background: var(--accent-purple-soft)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </div>
+              <h4 data-i18n="skills.designTitle">Design</h4>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill">Canva</span>
+              <span class="skill-pill">Figma</span>
+              <span class="skill-pill" data-i18n="skill.uiux">UI/UX Design</span>
+              <span class="skill-pill" data-i18n="skill.graphic">Graphic Design</span>
+            </div>
+          </div>
+
+          <div class="skill-group glass-card">
+            <div class="skill-group-header">
+              <div class="skill-group-icon" style="background: var(--accent-green-soft)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h4 data-i18n="skills.devTitle">Development</h4>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill">HTML</span>
+              <span class="skill-pill">CSS</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">Next.js</span>
+            </div>
+          </div>
+
+          <div class="skill-group glass-card">
+            <div class="skill-group-header">
+              <div class="skill-group-icon" style="background: var(--accent-orange-soft)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </div>
+              <h4 data-i18n="skills.bizTitle">Business</h4>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill" data-i18n="skill.bizAnalysis">Business Analysis</span>
+              <span class="skill-pill" data-i18n="skill.projMgmt">Project Management</span>
+              <span class="skill-pill" data-i18n="skill.stakeholder">Stakeholder Management</span>
+              <span class="skill-pill" data-i18n="skill.custAcq">Customer Acquisition</span>
+            </div>
+          </div>
+
+          <div class="skill-group glass-card">
+            <div class="skill-group-header">
+              <div class="skill-group-icon" style="background: rgba(236, 72, 153, 0.12)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h4 data-i18n="skills.softTitle">Soft Skills</h4>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill" data-i18n="skill.leadership">Leadership</span>
+              <span class="skill-pill" data-i18n="skill.communication">Communication</span>
+              <span class="skill-pill" data-i18n="skill.publicSpeaking">Public Speaking</span>
+              <span class="skill-pill" data-i18n="skill.problemSolving">Problem Solving</span>
+            </div>
+          </div>
+
+          <div class="skill-group glass-card">
+            <div class="skill-group-header">
+              <div class="skill-group-icon" style="background: rgba(20, 184, 166, 0.12)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <h4 data-i18n="skills.aiTitle">AI &amp; Innovation</h4>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill" data-i18n="skill.genAI">Generative AI</span>
+              <span class="skill-pill" data-i18n="skill.promptEng">Prompt Engineering</span>
+              <span class="skill-pill" data-i18n="skill.aiDev">AI-Assisted Dev</span>
+              <span class="skill-pill" data-i18n="skill.digitalTrans">Digital Transformation</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <p class="section-label" data-i18n="contact.label">Contact</p>
+          <h2 class="section-title">Let's <span class="gradient-text" data-i18n="contact.titleGrad">Connect</span></h2>
+          <p class="section-subtitle" data-i18n="contact.subtitle">Open for opportunities, collaborations, and conversations. Reach out anytime!</p>
+        </div>
+        <div class="contact-grid" data-animate>
+          <div class="contact-info">
+            <div class="contact-card glass-card">
+              <a href="mailto:willyhutagalung99@gmail.com" class="contact-item">
+                <div class="contact-icon" style="background: var(--accent-blue-soft)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <span class="contact-label">Email</span>
+                  <span class="contact-value">willyhutagalung99@gmail.com</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="contact-arrow"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+              <a href="tel:082384751520" class="contact-item">
+                <div class="contact-icon" style="background: var(--accent-green-soft)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <span class="contact-label" data-i18n="contact.phone">Phone / WhatsApp</span>
+                  <span class="contact-value">082384751520</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="contact-arrow"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/willy-hutagalung-205463316/" target="_blank" rel="noopener" class="contact-item">
+                <div class="contact-icon" style="background: var(--accent-purple-soft)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="var(--accent-purple)"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </div>
+                <div>
+                  <span class="contact-label">LinkedIn</span>
+                  <span class="contact-value">willy-hutagalung-205463316</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="contact-arrow"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+              <div class="contact-item no-hover">
+                <div class="contact-icon" style="background: var(--accent-orange-soft)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <span class="contact-label" data-i18n="contact.location">Location</span>
+                  <span class="contact-value">Yogyakarta, Indonesia</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form glass-card" id="contactForm">
+            <h3 class="form-title" data-i18n="contact.formTitle">Send a Message</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name" data-i18n="contact.name">Your Name</label>
+                <input type="text" id="name" name="name" data-i18n-placeholder="contact.namePlaceholder" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="email" data-i18n="contact.email">Email Address</label>
+                <input type="email" id="email" name="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject" data-i18n="contact.subject">Subject</label>
+              <input type="text" id="subject" name="subject" data-i18n-placeholder="contact.subjectPlaceholder" placeholder="Let's work together!" />
+            </div>
+            <div class="form-group">
+              <label for="message" data-i18n="contact.message">Message</label>
+              <textarea id="message" name="message" rows="5" data-i18n-placeholder="contact.messagePlaceholder" placeholder="Tell me about your project or opportunity..." maxlength="500" required></textarea>
+              <div class="char-counter" id="charCounter">0 / 500</div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <span data-i18n="contact.sendBtn">Send via WhatsApp</span>
+            </button>
+            <p class="form-note" id="formMsg"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p class="footer-name">Theofilus Willy Marojahan Hgl</p>
+        <p class="footer-tagline" data-i18n="footer.tagline">Information Systems · Designer · Developer · Leader</p>
+        <p class="footer-copy" data-i18n="footer.copy">© 2025 Willy Hutagalung. All rights reserved.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/willy-hutagalung-205463316/" target="_blank" rel="noopener" class="footer-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="footer-icon"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/twmh99" target="_blank" rel="noopener" class="footer-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="footer-icon"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          <span>GitHub</span>
+        </a>
+        <a href="https://willyhutagalung99-portfolio.vercel.app/" target="_blank" rel="noopener" class="footer-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer-icon"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span data-i18n="footer.liveSite">Live Site</span>
+        </a>
+        <a href="mailto:willyhutagalung99@gmail.com" class="footer-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>Email</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Search Modal -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-modal glass-card">
+      <div class="search-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" id="searchInput" placeholder="Search sections, skills, projects..." autocomplete="off" />
+        <button id="searchClose" aria-label="Close search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+      <p class="search-tip">Press <kbd>Esc</kbd> to close · <kbd>Enter</kbd> to navigate</p>
+    </div>
+  </div>
+
+  <!-- Success Toast Notification -->
+  <div class="toast" id="successToast">
+    <div class="toast-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    </div>
+    <div class="toast-content">
+      <p class="toast-title" id="toastTitle">Message Sent!</p>
+      <p class="toast-desc" id="toastDesc">WhatsApp is opening. Continue sending your message there.</p>
+    </div>
+    <button class="toast-close" id="toastClose" aria-label="Close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
