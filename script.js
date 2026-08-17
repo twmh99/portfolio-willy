@@ -750,7 +750,7 @@ const projectData = {
     outcome_id: 'Berhasil meluncurkan portofolio profesional yang menunjukkan keahlian CSS/JS tingkat lanjut. Mendapat respons positif atas tampilan premium, interaksi yang halus, dan konten dwibahasa yang komprehensif.',
     tech: ['HTML5', 'CSS3', 'JavaScript', 'UI/UX Design', 'Figma'],
     github: 'https://github.com/twmh99',
-    live: 'https://willyhutagalung99-portfolio.vercel.app/'
+    live: 'https://portfolio-willy-self.vercel.app/'
   },
   futuretech: {
     title: 'FutureTech – Futuristic E-Commerce Platform',
