@@ -38,12 +38,13 @@ const translations = {
     'stats.projects': 'Major Projects',
     'stats.certs': 'Certifications',
     'stats.roles': 'Org Roles',
+    'stats.gpa': 'GPA / 4.00',
 
     // ABOUT
     'about.label': 'About Me',
     'about.title': 'Passionate About Tech,',
     'about.titleGrad': 'Design & Leadership',
-    'about.desc1': "I'm Theofilus Willy Marojahan Hgl, an Information Systems student at Universitas Atma Jaya Yogyakarta with a deep passion for digital transformation, business analysis, and user-centered design.",
+    'about.desc1': "I'm Theofilus Willy Marojahan Hgl, an Information Systems student at Universitas Atma Jaya Yogyakarta (GPA 3.72/4.00) with a deep passion for digital transformation, business analysis, and user-centered design.",
     'about.desc2': "With hands-on experience as a Growth & Acquisition Intern at PT Bank Digital BCA, I've worked in cross-functional teams in one of Indonesia's top digital banking environments, strengthening my analytical thinking and communication skills.",
     'about.desc3': "Beyond technical work, I've led organizations, trained students in graphic design, moderated national seminars, and represented my university at national intercultural events. I thrive at the intersection of technology, design, and people.",
     'about.infoEducation': 'Education',
@@ -259,12 +260,13 @@ const translations = {
     'stats.projects': 'Proyek Utama',
     'stats.certs': 'Sertifikasi',
     'stats.roles': 'Jabatan Org',
+    'stats.gpa': 'IPK / 4.00',
 
     // ABOUT
     'about.label': 'Tentang Saya',
     'about.title': 'Bersemangat di Bidang Teknologi,',
     'about.titleGrad': 'Desain & Kepemimpinan',
-    'about.desc1': 'Saya Theofilus Willy Marojahan Hgl, mahasiswa Sistem Informasi di Universitas Atma Jaya Yogyakarta (IPK 3.69/4.00) dengan minat mendalam di transformasi digital, analisis bisnis, dan desain yang berpusat pada pengguna.',
+    'about.desc1': 'Saya Theofilus Willy Marojahan Hgl, mahasiswa Sistem Informasi di Universitas Atma Jaya Yogyakarta (IPK 3.72/4.00) dengan minat mendalam di transformasi digital, analisis bisnis, dan desain yang berpusat pada pengguna.',
     'about.desc2': 'Dengan pengalaman langsung sebagai Growth & Acquisition Intern di PT Bank Digital BCA, saya telah bekerja dalam tim lintas fungsi di salah satu lingkungan perbankan digital terkemuka di Indonesia, memperkuat kemampuan analitis dan komunikasi saya.',
     'about.desc3': 'Di luar pekerjaan teknis, saya telah memimpin organisasi, melatih mahasiswa dalam desain grafis, memoderasi seminar nasional, dan mewakili universitas di acara lintas budaya nasional. Saya berkembang di persimpangan teknologi, desain, dan manusia.',
     'about.infoEducation': 'Pendidikan',
@@ -1558,7 +1560,7 @@ let statAnimated = false;
 const statsObserver = new IntersectionObserver((entries) => {
   if (entries[0].isIntersecting && !statAnimated) {
     statAnimated = true;
-    const targets = [3, 6, 10, 3.69];
+    const targets = [3, 6, 10, 3.72];
     const suffixes = ['+', '+', '+', ''];
     document.querySelectorAll('.stat-num').forEach((el, i) => animateCounter(el, targets[i], suffixes[i]));
   }
