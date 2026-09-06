@@ -38,13 +38,12 @@ const translations = {
     'stats.projects': 'Major Projects',
     'stats.certs': 'Certifications',
     'stats.roles': 'Org Roles',
-    'stats.gpa': 'GPA / 4.00',
 
     // ABOUT
     'about.label': 'About Me',
     'about.title': 'Passionate About Tech,',
     'about.titleGrad': 'Design & Leadership',
-    'about.desc1': "I'm Theofilus Willy Marojahan Hgl, an Information Systems student at Universitas Atma Jaya Yogyakarta (GPA 3.69/4.00) with a deep passion for digital transformation, business analysis, and user-centered design.",
+    'about.desc1': "I'm Theofilus Willy Marojahan Hgl, an Information Systems student at Universitas Atma Jaya Yogyakarta with a deep passion for digital transformation, business analysis, and user-centered design.",
     'about.desc2': "With hands-on experience as a Growth & Acquisition Intern at PT Bank Digital BCA, I've worked in cross-functional teams in one of Indonesia's top digital banking environments, strengthening my analytical thinking and communication skills.",
     'about.desc3': "Beyond technical work, I've led organizations, trained students in graphic design, moderated national seminars, and represented my university at national intercultural events. I thrive at the intersection of technology, design, and people.",
     'about.infoEducation': 'Education',
@@ -260,7 +259,6 @@ const translations = {
     'stats.projects': 'Proyek Utama',
     'stats.certs': 'Sertifikasi',
     'stats.roles': 'Jabatan Org',
-    'stats.gpa': 'IPK / 4.00',
 
     // ABOUT
     'about.label': 'Tentang Saya',
